@@ -24,4 +24,5 @@ print(phrase[len(phrase) - 1])
 # find location of a particular character
 print(phrase.index("A"))
 
-# 37:12
+# Replace
+print(phrase.replace("Giraffe", "Elephant"));  # Elephant Academy
