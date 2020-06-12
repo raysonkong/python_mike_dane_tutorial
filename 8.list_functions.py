@@ -74,18 +74,24 @@ print(f"numbers2 after ... {numbers2}")
 
 
 # more shallow copy
+# it means (my own words, need to confirm later)
+# the array itself is pass-by-value
+# but the elements are pass-by-reference
+# how do you visualize it?
+# a copied array here is just a different catalogue pointing to the same products in the warehouse
+
 guitars1 = ["Ibanez", ["Fender"], "Schecter", "Shur"]
 guitars2 = guitars1.copy()
 guitars1[1][0] = "Whatever"
 
-print(guitars1)
-print(guitars2)
+print(guitars1) # [ibanez, [whatever], schecter, shur]
+print(guitars2) # [ibanez, [whatever], schecter, shur]
 
 
 guitars3 = ["Ibanez", "Fender", "Schecter", "Shur"]
 guitars4 = guitars3.copy()
 
 guitars3[1] = "whatever"
-print(guitars3)
-print(guitars4)
+print(guitars3) # [ibanez, whatever, schecter, shur]
+print(guitars4) #[ibanez, fender, schecter, shur]
 

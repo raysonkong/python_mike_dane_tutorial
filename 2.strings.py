@@ -20,6 +20,7 @@ print(len(phrase))
 # access character
 print(phrase[6])
 print(phrase[len(phrase) - 1])
+print(phrase[-1])
 
 # find location of a particular character
 print(phrase.index("A"))
